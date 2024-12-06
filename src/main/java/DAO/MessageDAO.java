@@ -123,9 +123,7 @@ public class MessageDAO{
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
 
             //write PreparedStatement setString and setInt methods here.
-            //preparedStatement.setInt(1, msg.getPosted_by());
             preparedStatement.setString(1, msg.getMessage_text());
-            //preparedStatement.setLong(3, msg.getTime_posted_epoch());
             preparedStatement.setInt(2, id);
 
             preparedStatement.executeUpdate();
@@ -142,7 +140,7 @@ public class MessageDAO{
         Connection connection = ConnectionUtil.getConnection();
         List<Message> messages = new ArrayList<>();
         try {
-            //SQL logic to get all of the messages within the table
+            //SQL logic to get all of the messages within the table from a user
             String sql = "SELECT * FROM message WHERE posted_by = ?";  
             
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
