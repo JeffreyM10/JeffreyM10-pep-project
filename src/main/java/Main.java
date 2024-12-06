@@ -16,7 +16,7 @@ public class Main {
 
         // Message msg = new Message();
         // msg.setPosted_by(1);
-        // msg.setMessage_text("XXXXX");
+        // msg.setMessage_text("XXXX");
 
         // Message msg1 = new Message();
         // msg.setPosted_by(1);
